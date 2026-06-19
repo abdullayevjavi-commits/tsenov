@@ -1,39 +1,46 @@
 # -*- coding: utf-8 -*-
 """Single source of truth for the article. Rendered to DOCX and PDF by the
-render_*.py scripts so the two outputs never drift. Revision 4 (addresses the
-third review round)."""
+render_*.py scripts so the two outputs never drift. Revision 5 (addresses the
+fourth review round: proposed-framework reframing, narrowed scope, structured
+search, expanded Uzbekistan vignette, weighting and endogeneity discussion,
+sustainability references and practical checklists)."""
 
-TITLE = ("Digital Transformation and the Performance of Small and Medium-Sized "
-         "Enterprises: A Management Framework and Evidence from Emerging Asia")
+TITLE = ("Digital Transformation and SME Performance in ASEAN and Central Asia: "
+         "A Proposed Management Framework")
 
 AUTHORS = ["[Author Name], [e-mail]", "[Department]", "[Institution]"]
 
 ABSTRACT = (
     "Abstract: Digital transformation is the central management challenge for small and "
-    "medium-sized enterprises (SMEs), which dominate the economies of emerging Asia yet adopt "
-    "advanced digital technologies more slowly than large firms. This study develops a management "
-    "framework explaining how SMEs convert digital technologies into superior performance. Building "
-    "on the dynamic-capabilities perspective and on the distinction between digitisation, "
-    "digitalisation and digital transformation, the framework links external drivers to the firm\u2019s "
-    "sensing, seizing and reconfiguring capabilities, to the depth of the transformation undertaken, "
-    "and to performance, with a reinvestment feedback loop. The contribution is integrative rather "
-    "than metric: it embeds firm-level digital-adoption measures in a capability-conditioned model "
-    "and specifies a moderated relationship \u2014 a digital-transformation intensity (DTI) measure "
-    "interacting with dynamic capability \u2014 that can be tested once both constructs are "
-    "operationalised, which the study sets out using established adoption items and a validated "
-    "dynamic-capabilities scale. The framework is built through a narrative review, illustrated with "
-    "a numerical example of the moderation logic, and assessed in light of secondary indicators from "
-    "emerging Asia, including the ASEAN region and a country vignette of Uzbekistan. In the "
-    "illustration the performance return to digital adoption is about two-and-a-half times larger at "
-    "high than at low capability; the analysis identifies managerial skills and finance, rather than "
-    "connectivity, as the binding constraints for ASEAN and Central Asian SMEs, and derives "
-    "managerial and policy recommendations accordingly, including a simple capability-threshold "
-    "diagnostic for public support."
+    "medium-sized enterprises (SMEs), which dominate the economies of ASEAN and Central Asia yet "
+    "adopt advanced digital technologies more slowly than large firms. This study proposes a "
+    "management framework explaining how SMEs convert digital technologies into superior "
+    "performance. Building on the dynamic-capabilities perspective and on the distinction between "
+    "digitisation, digitalisation and digital transformation, the framework links external drivers "
+    "to the firm\u2019s sensing, seizing and reconfiguring capabilities, to the depth of the "
+    "transformation undertaken, and to performance, with a reinvestment feedback loop. The "
+    "contribution is integrative rather than metric: unlike prior reviews that establish the "
+    "relevance of capabilities, and unlike existing composite indices such as the European DESI "
+    "that score adoption alone, the framework embeds firm-level digital-adoption measures in an "
+    "explicit capability-conditioned causal structure and states the often-asserted claim that "
+    "\u201ctechnology alone is not enough\u201d as a single, estimable moderation hypothesis \u2014 "
+    "a digital-transformation intensity (DTI) measure interacting with dynamic capability \u2014 "
+    "together with a capability-threshold diagnostic for public support. Both constructs are "
+    "operationalised with established adoption items and a validated dynamic-capabilities scale, and "
+    "the data, weighting options, endogeneity concerns and estimation strategy for testing the "
+    "specification are set out. The framework is built through a structured narrative review of "
+    "Scopus and Web of Science sources, illustrated with a numerical example of the moderation "
+    "logic, and assessed in light of secondary indicators for the ASEAN region and an expanded "
+    "country vignette of Uzbekistan with a Kazakhstan comparison. The empirical estimation of the "
+    "specification is identified as the principal direction for further work. The analysis points "
+    "to managerial skills and finance, rather than connectivity, as the binding constraints for "
+    "ASEAN and Central Asian SMEs, and derives step-by-step managerial and policy checklists "
+    "accordingly."
 )
 
 KEYWORDS = ("Key words: digital transformation; small and medium-sized enterprises; dynamic "
-            "capabilities; firm performance; emerging Asia.")
-JEL = "JEL: M15, M21, O33, L25, O18, O53."
+            "capabilities; firm performance; ASEAN; Central Asia.")
+JEL = "JEL: M15, M21, O33, L25, O10, O18, O53."
 
 BLOCKS = [
     ("h1", "Introduction"),
@@ -45,9 +52,10 @@ BLOCKS = [
      "improvements in performance. This question is most acute for small and medium-sized enterprises "
      "(SMEs). In the member states of the Association of Southeast Asian Nations (ASEAN), micro, "
      "small and medium-sized enterprises make up on average more than ninety-seven per cent of all "
-     "firms and provide the large majority of employment (Asian Development Bank, 2023). Yet they "
-     "adopt advanced digital technologies more slowly than large enterprises and face tighter "
-     "constraints on finance, skills and managerial capacity (OECD, 2021; Yoshino & "
+     "firms and provide the large majority of employment (Asian Development Bank, 2023); in the "
+     "economies of Central Asia they play a comparably central role (OECD, 2021b). Yet across both "
+     "regions these firms adopt advanced digital technologies more slowly than large enterprises and "
+     "face tighter constraints on finance, skills and managerial capacity (OECD, 2021a; Yoshino & "
      "Taghizadeh-Hesary, 2016)."),
     ("p",
      "The literature has clarified what digital transformation is, but it has paid less attention to "
@@ -59,28 +67,35 @@ BLOCKS = [
      "2021; Kraus et al., 2022). Whether the process raises performance depends on the capabilities "
      "the firm can mobilise around it (Teece, 2007; Warner & W\u00e4ger, 2019), and SME-focused "
      "reviews report that transformation levels in smaller firms remain low and that the field still "
-     "lacks process-level guidance (de Mattos et al., 2024; Sagala & \u0150ri, 2024)."),
+     "lacks process-level guidance (de Mattos et al., 2024; Sagala & \u0150ri, 2024). A parallel "
+     "strand now links SME digital transformation to sustainability and the Sustainable Development "
+     "Goals, but likewise concludes that managerial capability and a clear strategy, not technology "
+     "access, determine whether transformation translates into competitive and sustainable advantage "
+     "(Mick et al., 2024; Lu & Shaharudin, 2024)."),
     ("p",
      "This study addresses that gap with a management framework connecting the external drivers of "
      "digital transformation, the dynamic capabilities of the firm, the depth of the transformation "
-     "undertaken and the resulting performance, closed by a reinvestment feedback loop. Its "
-     "contribution is integrative rather than the proposal of a new metric. Firm-level digital "
-     "adoption is already measured \u2014 for example by the World Bank Enterprise Surveys, by the "
-     "European digital-intensity indicators and in survey studies such as Teng, Wu and Yang (2022). "
-     "What the framework adds is, first, to embed such adoption measures in an explicit "
-     "capability-conditioned causal structure; second, to state the often-asserted claim that "
-     "\u201ctechnology alone is not enough\u201d as a moderated relationship with a clear empirical "
-     "test (the interaction between digital-transformation intensity and dynamic capability); and "
-     "third, to apply the framework to emerging Asia \u2014 the ASEAN region and the under-researched "
-     "economies of Central Asia, with Uzbekistan as a country vignette \u2014 where firm-level "
-     "evidence is comparatively thin."),
+     "undertaken and the resulting performance, closed by a reinvestment feedback loop. The framework "
+     "is proposed and specified for testing rather than estimated here. Its contribution differs from "
+     "prior work in three specific ways. First, whereas existing reviews establish that capabilities "
+     "matter (Hanelt et al., 2021; Kraus et al., 2022; de Mattos et al., 2024), this study embeds "
+     "firm-level digital-adoption measures in an explicit, capability-conditioned causal structure. "
+     "Second, whereas composite digital-intensity indices such as the European Digital Economy and "
+     "Society Index score adoption on its own, the framework states the claim that \u201ctechnology "
+     "alone is not enough\u201d as a single, estimable moderation hypothesis \u2014 the interaction "
+     "between digital-transformation intensity and dynamic capability \u2014 and derives from it a "
+     "capability-threshold diagnostic that is new to the SME-policy debate. Third, it applies the "
+     "framework to a deliberately bounded set of economies, the ASEAN region and Central Asia, with "
+     "an expanded Uzbekistan vignette and a Kazakhstan comparison, where firm-level evidence is "
+     "comparatively thin, rather than to \u201cemerging Asia\u201d as a whole."),
     ("p",
      "The remainder of the article is organised as follows. Section 1 reviews the literature and "
      "defines the core constructs. Section 2 presents the framework, the measures and the estimable "
-     "specification. Section 3 describes the data, the operationalisation of the constructs and the "
-     "estimation strategy. Section 4 reports a numerical illustration of the moderation logic and the "
-     "regional indicators, including the Uzbekistan vignette. Section 5 discusses the management and "
-     "policy implications. The final section concludes."),
+     "specification. Section 3 describes the methodology \u2014 the structured review, the data, the "
+     "operationalisation of the constructs, the treatment of endogeneity and the estimation strategy. "
+     "Section 4 reports a numerical illustration of the moderation logic and the regional indicators, "
+     "including the expanded Uzbekistan vignette and the Kazakhstan comparison. Section 5 sets out "
+     "the management and policy implications as concrete checklists. The final section concludes."),
 
     ("h1", "1. Theoretical background and literature review"),
     ("p",
@@ -169,6 +184,19 @@ BLOCKS = [
      "Venkatesh et al., 2003); the measure is therefore not a new statistic but a transparent "
      "aggregation of existing ones for use inside the framework."),
     ("p",
+     "The weights w\u1d62 are not arbitrary and can be fixed by one of three transparent procedures, "
+     "reported side by side as a robustness check. (i) Equal weighting sets w\u1d62 = 1/n for all n "
+     "elements; it imposes no prior and serves only as a baseline. (ii) Expert weighting elicits the "
+     "relative importance of each element from a panel of five to seven domain experts, who rate each "
+     "element on a one-to-five scale, after which the normalised mean ratings become the weights; "
+     "this is the recommended approach where a credible panel is available. (iii) Data-driven "
+     "weighting derives the weights from the data themselves \u2014 from the factor loadings of an "
+     "exploratory or confirmatory factor analysis, or from the variance shares of a principal-"
+     "component analysis \u2014 so that elements carrying more common information receive more "
+     "weight. Because the three procedures can diverge, the empirical strategy is to compute DTI "
+     "under all three and report whether the substantive results are stable, rather than to defend a "
+     "single weighting on a priori grounds."),
+    ("p",
      "Capability (C) is operationalised, rather than left undefined, as the firm\u2019s dynamic "
      "capability measured on the validated scale of Kump et al. (2019), which captures sensing "
      "(S\u2081), seizing (S\u2082) and transforming (S\u2083) capacities through multi-item "
@@ -179,8 +207,12 @@ BLOCKS = [
      "should verify the factorial structure of the scale (Kump et al., 2019) rather than impose equal "
      "weights, and observable complements \u2014 managerial digital skills, the presence of an "
      "explicit digital strategy, prior technology projects and staff training \u2014 are available as "
-     "proxies where survey access is limited. Both DTI and C are thus measurable with existing, "
-     "peer-validated instruments."),
+     "proxies where survey access is limited. Because the Kump et al. (2019) scale was validated on "
+     "Austrian firms, applying it to Uzbek or other Central Asian SMEs requires prior local "
+     "validation \u2014 translation and back-translation, a pilot, and a confirmatory factor analysis "
+     "to check that the sensing, seizing and transforming items load as intended in the new context "
+     "\u2014 before the composite C is treated as comparable across settings. Subject to that "
+     "validation, both DTI and C are measurable with existing, peer-validated instruments."),
     ("h2", "2.2. The estimable specification"),
     ("p",
      "Let \u0394P denote the change in a performance measure (for example labour productivity, sales "
@@ -205,39 +237,67 @@ BLOCKS = [
      "interaction effect:"),
     ("eq", "\u0394P = \u03b2\u2083\u00b7(DTI\u00d7C)   [illustration only] .", 4),
 
-    ("h1", "3. Data, operationalisation and estimation strategy"),
+    ("h1", "3. Methodology: review protocol, data and estimation strategy"),
     ("p",
      "This article is conceptual with an empirical research design specified for testing; it does not "
-     "itself collect primary data. The framework was developed through a narrative (non-exhaustive) "
-     "review of the literature: sources were identified through searches of Scopus and Web of Science "
-     "using the terms \u201cdigital transformation\u201d, \u201cSME\u201d and \u201cdynamic "
-     "capabilities\u201d, supplemented by citation tracking of the key reviews, and were screened for "
-     "relevance to SMEs and to performance. The review is presented as a narrative synthesis and does "
-     "not claim the exhaustive search protocol, screening counts or PRISMA reporting of a systematic "
-     "review."),
+     "itself collect primary data. The framework was developed through a structured narrative review "
+     "of the literature. Searches were run in Scopus and Web of Science using the Boolean string "
+     "(\u201cdigital transformation\u201d OR \u201cdigitalisation\u201d OR \u201cdigitization\u201d) "
+     "AND (\u201cSME\u201d OR \u201csmall and medium-sized enterprises\u201d) AND (\u201cdynamic "
+     "capabilities\u201d OR \u201cfirm performance\u201d), restricted to peer-reviewed journal "
+     "articles in English published between 2010 and 2025, and supplemented by backward and forward "
+     "citation tracking of the principal reviews. Records were screened on title and abstract and "
+     "retained when they addressed SMEs and linked digital transformation to capabilities or "
+     "performance; foundational works on dynamic capabilities and technology acceptance were retained "
+     "regardless of date because they define the constructs. The synthesis is reported as a "
+     "structured narrative review: it makes the databases, search terms, time window and "
+     "inclusion criteria explicit, but it does not claim the exhaustive coverage, full screening "
+     "counts or PRISMA flow diagram of a systematic review, and the reading of the evidence is "
+     "interpretive rather than meta-analytic."),
     ("p",
      "For testing the specification in equation (3), the constructs are operationalised as follows. "
      "DTI is computed from firm-level adoption items of the kind collected in the World Bank "
      "Enterprise Surveys \u2014 whose 2024 round for Uzbekistan provides a suitable primary, "
      "firm-level data source \u2014 such as use of a website or e-commerce, e-mail with clients and "
      "suppliers, and, in recent rounds, cloud services and digital payments, complemented by the "
-     "European digital-intensity indicators; equal weights serve as a baseline and entropy- or "
-     "expert-derived weights as robustness checks. Capability C is measured with the Kump et al. "
-     "(2019) sensing\u2013seizing\u2013transforming scale administered to owner-managers, with the "
-     "observable proxies noted in Section 2.1 used where a full survey is infeasible. Performance "
-     "\u0394P is taken from accounts or survey self-reports (productivity, sales growth, export "
-     "intensity). Equation (3) is then estimated by ordinary least squares with robust standard "
-     "errors, or by structural-equation modelling when latent constructs are modelled directly, and "
-     "the moderation is assessed from the sign, size and significance of \u03b2\u2083 and from "
-     "marginal-effect plots of \u2202\u0394P/\u2202DTI across the range of C."),
+     "European digital-intensity indicators; the equal, expert and data-driven weighting schemes of "
+     "Section 2.1 are all applied and compared. Capability C is measured with the locally validated "
+     "Kump et al. (2019) sensing\u2013seizing\u2013transforming scale administered to owner-managers, "
+     "with the observable proxies noted in Section 2.1 used where a full survey is infeasible. "
+     "Performance \u0394P is taken from accounts or survey self-reports (productivity, sales growth, "
+     "export intensity). The baseline estimator is ordinary least squares with robust standard "
+     "errors, or structural-equation modelling when the latent constructs are modelled directly; the "
+     "moderation is read from the sign, size and significance of \u03b2\u2083 and from marginal-effect "
+     "plots of \u2202\u0394P/\u2202DTI across the range of C, with the identification strategy of "
+     "Section 3.1 used to support a causal interpretation."),
+    ("h2", "3.1. Endogeneity and identification"),
+    ("p",
+     "Estimating equation (3) by ordinary least squares would not, on its own, support a causal "
+     "reading, because capability and performance are plausibly jointly determined: better-performing "
+     "firms generate the resources to invest in capability and technology, exactly the reinvestment "
+     "loop the framework builds in, so DTI, C and the interaction term are likely correlated with the "
+     "error. The design therefore treats identification explicitly. First, an instrumental-variables "
+     "strategy uses instruments that shift adoption and capability but do not directly affect a given "
+     "firm\u2019s performance \u2014 the quality of local internet infrastructure (broadband speed "
+     "and coverage in the firm\u2019s district), peer adoption among neighbouring or same-sector "
+     "firms, and eligibility for or distance to public digital-support programmes \u2014 estimated by "
+     "two-stage least squares with the usual relevance and exclusion checks. Second, where panel data "
+     "are available, firm fixed effects absorb time-invariant heterogeneity and lagged regressors "
+     "reduce simultaneity. Third, the staggered roll-out of broadband and of government subsidy "
+     "schemes offers quasi-experimental variation that a difference-in-differences design can "
+     "exploit. These strategies are part of the proposed design; the present article specifies them "
+     "rather than implementing them."),
     ("p",
      "Pending such firm-level estimation, the framework is assessed in light of secondary indicators "
-     "for emerging Asia drawn from official and institutional sources: the Asian Development Bank "
-     "(2023, 2024) and the OECD and ERIA (2024) for the ASEAN region; Yoshino and Taghizadeh-Hesary "
-     "(2016) for the structural constraints on Asian SMEs; and, for the Uzbekistan vignette, World "
-     "Bank country updates (2023, 2025), the World Bank Enterprise Surveys (2024) and a UNESCAP (2025) "
-     "foresight initiative. Estimating \u03b2\u2080\u2013\u03b2\u2083 on firm-level data, including a "
-     "primary survey of Uzbek and ASEAN SMEs, is the principal direction for further work."),
+     "for the ASEAN region and Central Asia drawn from official and institutional sources: the Asian "
+     "Development Bank (2023, 2024) and the OECD and ERIA (2024) for the ASEAN region; Yoshino and "
+     "Taghizadeh-Hesary (2016) for the structural constraints on Asian SMEs; and, for the Central "
+     "Asian vignettes, the OECD\u2019s work on digital skills in Uzbekistan (OECD, 2023a) and on "
+     "framework conditions for the digital transformation of businesses in Kazakhstan (OECD, 2023b), "
+     "the regional outlook of OECD (2021b), World Bank country updates (2023, 2025), the World Bank "
+     "Enterprise Surveys (2024) and a UNESCAP (2025) foresight initiative. Estimating "
+     "\u03b2\u2080\u2013\u03b2\u2083 on firm-level data, including a primary survey of Uzbek and ASEAN "
+     "SMEs, is the principal direction for further work."),
 
     ("h1", "4. Illustration and regional indicators"),
     ("h2", "4.1. Numerical illustration of the moderation logic"),
@@ -271,7 +331,7 @@ BLOCKS = [
      "qualitative content of the proposition that capability, not technology, is the binding "
      "constraint; establishing its magnitude requires estimating equation (3) on firm-level data, as "
      "set out in Section 3."),
-    ("h2", "4.2. Regional indicators for emerging Asia"),
+    ("h2", "4.2. Regional indicators for ASEAN and Central Asia"),
     ("p",
      "Across the ASEAN member states, micro, small and medium-sized enterprises account for the "
      "overwhelming majority of firms and the bulk of employment, and the regional digital economy is "
@@ -293,27 +353,52 @@ BLOCKS = [
      "statistics authorities record more than 1.2 million small businesses in early 2025. "
      "Connectivity and e-commerce have grown quickly from a low base; the World Bank (2023) reports "
      "that the e-commerce market expanded roughly fivefold between 2018 and 2022, exceeding half a "
-     "billion United States dollars by 2023, and national policy under the Digital Uzbekistan 2030 "
-     "strategy aims to turn the country into a regional information-technology hub with higher "
-     "technology exports and large-scale job creation."),
+     "billion United States dollars by 2023."),
     ("p",
-     "The deeper transformation of enterprises nonetheless lags the roll-out of infrastructure. "
-     "Preliminary figures presented at a UNESCAP (2025) foresight workshop suggest that only about "
-     "ten per cent of SMEs were registered on the national digital public-services portal, an "
-     "indication that the uptake of even basic digital government services \u2014 let alone analytics "
-     "or artificial intelligence \u2014 remains shallow; this single figure is treated as indicative "
-     "and would benefit from confirmation in firm-level survey data. Viewed through the lens of the "
-     "framework, Uzbek SMEs increasingly possess the drivers and the connectivity but not yet the "
-     "capability \u2014 skills, finance and managerial capacity \u2014 that converts adoption into "
-     "performance. Table 2 summarises the regional and Uzbekistan indicators."),
+     "National policy is organised around the Digital Uzbekistan 2030 strategy. Its principal lines "
+     "of action are the build-out of digital infrastructure, the expansion of the information-"
+     "technology sector and the digitalisation of public services. On the supply side, IT Park "
+     "Uzbekistan, established in 2019, hosts a large and growing community of resident technology "
+     "companies and anchors the strategy\u2019s targets of substantially higher technology exports "
+     "and large-scale job creation, supported by sizeable public investment in infrastructure (World "
+     "Bank, 2023). On the public-services side, a unified digital-government portal and the "
+     "my.gov.uz interactive services consolidate tax, statistical and licensing procedures in a "
+     "single-window form intended to lower the transaction costs SMEs face. The OECD (2023a) "
+     "assessment of digital skills for private-sector competitiveness in Uzbekistan documents the "
+     "complementary skills agenda this requires."),
+    ("p",
+     "The deeper transformation of enterprises nonetheless lags the roll-out of infrastructure, and "
+     "the binding constraints are those the framework predicts. Coverage and quality of connectivity "
+     "remain uneven between urban and rural areas; managerial and technical skills are scarce; "
+     "access to finance for technology investment is limited; and the regulatory environment for the "
+     "digital economy is still maturing (OECD, 2023a; World Bank, 2023). Preliminary figures "
+     "presented at a UNESCAP (2025) foresight workshop suggest that only about ten per cent of SMEs "
+     "were registered on the national digital public-services portal, an indication that the uptake "
+     "of even basic digital government services \u2014 let alone analytics or artificial intelligence "
+     "\u2014 remains shallow; this single figure is treated as indicative and would benefit from "
+     "confirmation in firm-level survey data. Viewed through the lens of the framework, Uzbek SMEs "
+     "increasingly possess the drivers and the connectivity but not yet the capability \u2014 skills, "
+     "finance and managerial capacity \u2014 that converts adoption into performance."),
+    ("p",
+     "A brief comparison with Kazakhstan sharpens the point. Kazakhstan launched its Digital "
+     "Kazakhstan programme earlier, in 2017, and the OECD (2023b) review of framework conditions for "
+     "the digital transformation of businesses there finds that, even with more mature digital "
+     "infrastructure and e-government, the digitalisation of smaller firms still turns on managerial "
+     "capability, skills and the regulatory and financing environment rather than on connectivity "
+     "alone. The two Central Asian cases thus point in the same direction as the ASEAN evidence: "
+     "infrastructure and policy ambition advance first, and the capability to convert them into "
+     "firm-level performance follows more slowly. Table 2 summarises the regional, Uzbekistan and "
+     "Kazakhstan indicators."),
     ("table", "Table 2",
-     "Digital transformation of SMEs in emerging Asia: selected secondary indicators",
+     "Digital transformation of SMEs in ASEAN and Central Asia: selected secondary indicators",
      ["Indicator / observation", "Value", "Source"],
      [["MSME share of enterprises, ASEAN", "On average > 97% of firms", "ADB (2023)"],
       ["Main SME constraints in Asia", "Finance; databases; R&D; sales channels", "Yoshino & Taghizadeh-Hesary (2016)"],
       ["Uzbekistan \u2013 MSME role", "> 90% of firms; ~75% jobs; ~55% of GDP", "World Bank (2025)"],
       ["Uzbekistan \u2013 e-commerce", "~5\u00d7 growth 2018\u20132022; > USD 0.5 bn (2023)", "World Bank (2023)"],
+      ["Uzbekistan \u2013 digital strategy", "Digital Uzbekistan 2030; IT Park (est. 2019)", "World Bank (2023); OECD (2023a)"],
       ["Uzbekistan \u2013 SMEs on e-gov portal", "~10% registered (indicative)", "UNESCAP (2025)"],
+      ["Kazakhstan \u2013 digital strategy", "Digital Kazakhstan (since 2017); capability the constraint", "OECD (2023b)"],
       ["Binding constraint (framework)", "Capability: skills, finance, management", "This study"]],
      "Source: Compiled by the authors from the cited institutional sources; the e-government-portal "
      "figure is indicative."),
@@ -349,31 +434,79 @@ BLOCKS = [
      "shared infrastructure are neglected and support is confined to hardware, the predictable "
      "outcome is adoption without transformation, and the gap between dynamic and lagging firms "
      "persists."),
+    ("h2", "5.1. How to compute the capability-threshold diagnostic"),
+    ("p",
+     "The capability-threshold diagnostic is computed in four steps. (i) Estimate equation (3) on the "
+     "available SME sample to obtain \u03b2\u2081 and \u03b2\u2083. (ii) Recall that the marginal "
+     "return to adoption is \u2202\u0394P/\u2202DTI = \u03b2\u2081 + \u03b2\u2083\u00b7C, so the "
+     "threshold capability at which an extra unit of adoption begins to pay off (the marginal return "
+     "turns positive) is C\u0304 = \u2212\u03b2\u2081 / \u03b2\u2083 when \u03b2\u2081 < 0 and "
+     "\u03b2\u2083 > 0. (iii) Compute the average capability of the SME population from the Kump et "
+     "al. (2019) scale or its proxies and compare it with C\u0304. (iv) Read off the policy "
+     "implication: if the population average lies below C\u0304, the marginal currency unit is better "
+     "spent raising capability (skills, advisory services) than subsidising further hardware, and "
+     "vice versa. Because C\u0304 depends on estimated coefficients, it should be reported with a "
+     "confidence interval and re-estimated as data accumulate."),
+    ("h2", "5.2. Checklist for SME managers"),
+    ("p", "\u25a1 Compute the firm\u2019s current digital-transformation intensity (DTI) on a 0\u20131 "
+          "scale from the adoption items in Section 2.1."),
+    ("p", "\u25a1 Assess current capability (C) across sensing, seizing and transforming using the "
+          "Kump et al. (2019) items or the observable proxies (digital skills, a written digital "
+          "strategy, prior technology projects, staff training)."),
+    ("p", "\u25a1 If C is low (below about 0.5): invest first in skills and training, appoint a "
+          "decision-owner for digitalisation, and start with foundational tools \u2014 a business "
+          "website, professional e-mail, digital payments and cloud-based accounting \u2014 before "
+          "moving further."),
+    ("p", "\u25a1 If C is high (above about 0.5): advance to data analytics, integrated enterprise "
+          "software and, where justified, artificial-intelligence tools, and use them to support "
+          "business-model change rather than only to automate existing tasks."),
+    ("p", "\u25a1 Advance one digital element at a time, raising DTI only as C rises, so that adoption "
+          "and capability grow together (the capability-matched adoption rule)."),
+    ("h2", "5.3. Checklist for policymakers"),
+    ("p", "\u25a1 Estimate the average SME capability (C\u0304) for the country or sector from "
+          "enterprise-survey data and compute the capability threshold as in Section 5.1."),
+    ("p", "\u25a1 If average capability is low (below about 0.4): channel public support towards "
+          "skills, advisory and diagnostic services, SME databases and credit-information systems "
+          "that relax the finance constraint (Yoshino & Taghizadeh-Hesary, 2016), rather than towards "
+          "hardware subsidies."),
+    ("p", "\u25a1 If average capability is higher (above about 0.6): shift support towards "
+          "infrastructure, innovation and advanced-technology adoption, where the marginal return is "
+          "now greater."),
+    ("p", "\u25a1 In all cases, invest in shared digital public infrastructure \u2014 interoperable "
+          "payments, digital identity and single-window e-government such as Uzbekistan\u2019s "
+          "my.gov.uz \u2014 which lowers the fixed cost of transformation for the smallest firms; and "
+          "monitor SME digital uptake with firm-level surveys rather than infrastructure indicators "
+          "alone."),
 
     ("h1", "Conclusions"),
     ("p",
-     "Across emerging Asia, the firms that most need the productivity gains of digital technology "
-     "\u2014 the small and medium-sized enterprises that dominate employment and output \u2014 are "
-     "also those least equipped to realise them. This study argued that the decisive factor is not "
-     "access to technology but the managerial capability to absorb it. Integrating the process view "
-     "of digital transformation with the dynamic-capabilities perspective, it set out a framework "
-     "linking external drivers, the firm\u2019s sensing, seizing and reconfiguring capabilities, the "
-     "depth of the transformation undertaken and the resulting performance, with a reinvestment "
-     "feedback loop; it operationalised both digital-transformation intensity and dynamic capability "
-     "using existing, validated instruments; and it expressed the core claim as a moderation "
-     "hypothesis that can be estimated on firm-level data."),
+     "Across ASEAN and Central Asia, the firms that most need the productivity gains of digital "
+     "technology \u2014 the small and medium-sized enterprises that dominate employment and output "
+     "\u2014 are also those least equipped to realise them. This study argued that the decisive "
+     "factor is not access to technology but the managerial capability to absorb it. Integrating the "
+     "process view of digital transformation with the dynamic-capabilities perspective, it proposed a "
+     "framework linking external drivers, the firm\u2019s sensing, seizing and reconfiguring "
+     "capabilities, the depth of the transformation undertaken and the resulting performance, with a "
+     "reinvestment feedback loop; it operationalised both digital-transformation intensity and "
+     "dynamic capability using existing, validated instruments; and it expressed the core claim as a "
+     "single moderation hypothesis that can be estimated on firm-level data. Its distinct "
+     "contribution is to combine an explicit capability-conditioned causal structure, an estimable "
+     "interaction and a capability-threshold diagnostic, rather than to add another adoption index or "
+     "another review."),
     ("p",
-     "Assessed in light of secondary indicators from the ASEAN region and Uzbekistan, the framework "
-     "is consistent with a clear pattern: connectivity and policy ambition advance quickly, but the "
-     "capability to turn technology into performance \u2014 skills, finance and management \u2014 "
-     "lags behind. The practical message for managers is to grow adoption and capability together; "
-     "for policymakers, to use the capability-threshold diagnostic and to fund skills, finance and "
-     "shared digital infrastructure rather than hardware alone. The study\u2019s main limitation is "
-     "that the moderation is specified and illustrated rather than estimated; the numerical example "
-     "uses didactic inputs, not data. The clear next step is to estimate equation (3) on firm-level "
-     "evidence \u2014 the World Bank Enterprise Surveys, including the 2024 Uzbekistan round, or a "
-     "dedicated primary survey of Uzbek and ASEAN SMEs \u2014 which would quantify the interaction "
-     "\u03b2\u2083 and the capability threshold and sharpen the policy priorities."),
+     "Assessed in light of secondary indicators from the ASEAN region, Uzbekistan and Kazakhstan, the "
+     "framework is consistent with a clear pattern: connectivity and policy ambition advance quickly, "
+     "but the capability to turn technology into performance \u2014 skills, finance and management "
+     "\u2014 lags behind, a pattern that also conditions whether digital transformation supports the "
+     "sustainability goals now linked to it (Mick et al., 2024; Lu & Shaharudin, 2024). The practical "
+     "message for managers is to grow adoption and capability together; for policymakers, to use the "
+     "capability-threshold diagnostic and to fund skills, finance and shared digital infrastructure "
+     "rather than hardware alone. The study\u2019s main limitation is that the moderation is proposed "
+     "and illustrated rather than estimated; the numerical example uses didactic inputs, not data. "
+     "The clear next step is to estimate equation (3) on firm-level evidence \u2014 the World Bank "
+     "Enterprise Surveys, including the 2024 Uzbekistan round, or a dedicated primary survey of Uzbek "
+     "and ASEAN SMEs \u2014 which would quantify the interaction \u03b2\u2083 and the capability "
+     "threshold and sharpen the policy priorities."),
 ]
 
 REFERENCES = [
@@ -401,11 +534,23 @@ REFERENCES = [
     "Kump, B., Engelmann, A., Kessler, A., & Schweiger, C. (2019). Toward a dynamic capabilities "
     "scale: Measuring organizational sensing, seizing, and transforming capacities. Industrial and "
     "Corporate Change, 28(5), 1149\u20131172. https://doi.org/10.1093/icc/dty054",
+    "Lu, Z., & Shaharudin, M. S. (2024). Role of digital transformation for sustainable competitive "
+    "advantage of SMEs: A systematic literature review. Cogent Business & Management, 11(1), "
+    "2419489. https://doi.org/10.1080/23311975.2024.2419489",
+    "Mick, A. C., Kovaleski, J. L., & Chiroli, D. M. de G. (2024). Sustainable digital transformation "
+    "roadmaps for SMEs: A systematic literature review. Sustainability, 16(19), 8551. "
+    "https://doi.org/10.3390/su16198551",
     "Nambisan, S., Wright, M., & Feldman, M. (2019). The digital transformation of innovation and "
     "entrepreneurship: Progress, challenges and key themes. Research Policy, 48(8), 103773. "
     "https://doi.org/10.1016/j.respol.2019.03.018",
-    "OECD. (2021). The digital transformation of SMEs. Paris: OECD Publishing. "
+    "OECD. (2021a). The digital transformation of SMEs. Paris: OECD Publishing. "
     "https://doi.org/10.1787/bdb9256a-en",
+    "OECD. (2021b). Beyond COVID-19: Prospects for economic recovery in Central Asia. Paris: OECD "
+    "Publishing. https://doi.org/10.1787/03882e7b-en",
+    "OECD. (2023a). Digital skills for private sector competitiveness in Uzbekistan. Paris: OECD "
+    "Publishing. https://doi.org/10.1787/6c54f447-en",
+    "OECD. (2023b). Improving framework conditions for the digital transformation of businesses in "
+    "Kazakhstan. Paris: OECD Publishing. https://doi.org/10.1787/368d4d01-en",
     "OECD, & ERIA. (2024). SME Policy Index: ASEAN 2024 \u2013 Enabling sustainable growth and "
     "digitalisation. Paris: OECD Publishing / Jakarta: Economic Research Institute for ASEAN and East "
     "Asia. https://doi.org/10.1787/f1f0c5f3-en",

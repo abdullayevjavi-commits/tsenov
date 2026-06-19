@@ -9,7 +9,7 @@ for a in C.AUTHORS:
     lines.append("**" + a + "**")
 lines.append("")
 lines.append("> Prepared for *Economic Archive / Narodnostopanski Arhiv* (Tsenov Academy, "
-             "Svishtov). Revision 4. Publication-ready file: "
+             "Svishtov). Revision 5. Publication-ready file: "
              "`Economic_Archive_Digital_Transformation_SMEs_Asia.docx`; a PDF preview with the "
              "figures is also provided: `Economic_Archive_Digital_Transformation_SMEs_Asia.pdf`.")
 lines.append("")
