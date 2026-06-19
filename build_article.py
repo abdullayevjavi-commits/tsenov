@@ -5,7 +5,8 @@ follows the journal template (m9_Template_BM_eng.doc).
 
 Topic: the dominant theme in the supplied 600+ page collection of recently
 accepted articles - DIGITAL TRANSFORMATION / technology adoption in enterprises,
-with a strong SME focus - reframed toward management.
+with a strong SME focus - reframed toward management and adapted to the ASIAN
+context (emerging Asia: ASEAN and Central Asia / Uzbekistan).
 """
 from docx import Document
 from docx.shared import Pt, Inches
@@ -68,7 +69,7 @@ def equation(txt, number):
 
 # ===================== FRONT MATTER =====================
 para("Digital Transformation and the Performance of Small and Medium-Sized "
-     "Enterprises: A Management Framework and Evidence from the European Union",
+     "Enterprises: A Management Framework and Evidence from Emerging Asia",
      bold=True, align="center", spacing=1.0, space_after=10, caps=True)
 
 para("[Author Name], [e-mail]", bold=True, align="center", spacing=1.0, space_after=2)
@@ -77,29 +78,30 @@ para("[Institution]", bold=True, align="center", spacing=1.0, space_after=12)
 
 abstract = (
     "Abstract: Digital transformation has become the central management challenge for small and "
-    "medium-sized enterprises (SMEs), which account for the bulk of employment and value added in "
-    "the European economy yet adopt digital technologies more slowly than large firms. This article "
-    "develops a management framework that explains how SMEs convert digital technologies into "
-    "superior performance. Building on the dynamic-capabilities perspective and on the distinction "
-    "between digitisation, digitalisation and digital transformation, the framework links external "
-    "drivers to the firm\u2019s sensing, seizing and reconfiguring capabilities, to the depth of the "
-    "transformation undertaken, and ultimately to productivity, growth and resilience, with a "
-    "reinvestment feedback loop. A composite digital-transformation intensity index is proposed to "
-    "make the construct measurable for management purposes. The framework is confronted with "
-    "official European evidence, which shows a persistent gap between the European Union\u2019s "
-    "Digital Decade ambition and the actual digital intensity of SMEs, and a particularly wide gap "
-    "for lagging member states such as Bulgaria. The analysis yields concrete managerial and policy "
-    "recommendations on capability building, technology adoption, digital skills, cybersecurity and "
-    "targeted public support."
+    "medium-sized enterprises (SMEs), which dominate the economies of emerging Asia yet adopt "
+    "advanced digital technologies more slowly than large firms. This article develops a management "
+    "framework that explains how SMEs convert digital technologies into superior performance. "
+    "Building on the dynamic-capabilities perspective and on the distinction between digitisation, "
+    "digitalisation and digital transformation, the framework links external drivers to the "
+    "firm\u2019s sensing, seizing and reconfiguring capabilities, to the depth of the transformation "
+    "undertaken, and ultimately to productivity, growth and resilience, with a reinvestment feedback "
+    "loop. A composite digital-transformation intensity index is proposed to make the construct "
+    "measurable for management purposes. The framework is confronted with evidence from emerging "
+    "Asia, drawing on regional sources for the Association of Southeast Asian Nations and on the "
+    "rapidly digitalising economies of Central Asia, with Uzbekistan as an illustrative case. The "
+    "evidence shows that the binding constraint on SME performance is managerial and human "
+    "capability rather than connectivity, and the analysis yields concrete managerial and policy "
+    "recommendations on capability building, technology adoption, digital skills, finance and "
+    "targeted public support for Asian emerging economies."
 )
 para(abstract, spacing=1.0, space_after=8)
 
 para("Key words: digital transformation; small and medium-sized enterprises; dynamic capabilities; "
-     "firm performance; technology adoption.", spacing=1.0, space_after=4)
+     "firm performance; emerging Asia.", spacing=1.0, space_after=4)
 
 p = doc.add_paragraph(); p.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
 p.paragraph_format.line_spacing = 1.0; p.paragraph_format.space_after = Pt(12)
-r = p.add_run("JEL: M15, M21, O33, L25, D22."); set_run(r, bold=True)
+r = p.add_run("JEL: M15, M21, O33, L25, O53."); set_run(r, bold=True)
 
 # ===================== INTRODUCTION =====================
 heading("Introduction")
@@ -110,21 +112,23 @@ para(
     "being the principal arena of competition. For enterprises of every size, the management "
     "question is no longer whether to adopt such technologies but how to convert them into durable "
     "improvements in performance. This question is most acute for small and medium-sized enterprises "
-    "(SMEs). They constitute the overwhelming majority of firms in the European Union and generate a "
-    "large share of employment and value added, yet they adopt advanced digital technologies more "
-    "slowly than large firms and face tighter constraints on finance, skills and managerial "
-    "capacity (OECD, 2021).",
+    "(SMEs). In emerging Asia they are the backbone of the economy: in the member states of the "
+    "Association of Southeast Asian Nations (ASEAN), micro, small and medium-sized enterprises make "
+    "up on average more than ninety-seven per cent of all firms and provide the large majority of "
+    "employment (Asian Development Bank, 2023). Yet these firms adopt advanced digital technologies "
+    "more slowly than large enterprises and face tighter constraints on finance, skills and "
+    "managerial capacity (OECD, 2021; OECD & ERIA, 2024).",
     first_indent=0.30)
 
 para(
     "The literature has clarified what digital transformation is but has paid less attention to the "
-    "specific managerial mechanisms through which a resource-constrained SME turns technology into "
-    "results. Digital transformation is more than the purchase of software; it is an organisational "
-    "change process in which digital technologies reshape value creation, operations and the "
-    "business model itself (Vial, 2019; Verhoef et al., 2021). Whether that process raises "
-    "performance depends on the capabilities the firm can mobilise around it (Teece, 2007; Warner & "
-    "W\u00e4ger, 2019). For SMEs, where these capabilities are scarce, the gap between adopting a "
-    "technology and benefiting from it is correspondingly wide.",
+    "specific managerial mechanisms through which a resource-constrained SME in an emerging economy "
+    "turns technology into results. Digital transformation is more than the purchase of software; it "
+    "is an organisational change process in which digital technologies reshape value creation, "
+    "operations and the business model itself (Vial, 2019; Verhoef et al., 2021). Whether that "
+    "process raises performance depends on the capabilities the firm can mobilise around it (Teece, "
+    "2007; Warner & W\u00e4ger, 2019). For Asian SMEs, where these capabilities are scarce, the gap "
+    "between adopting a technology and benefiting from it is correspondingly wide.",
     first_indent=0.30)
 
 para(
@@ -132,9 +136,10 @@ para(
     "of digital transformation, the dynamic capabilities of the firm, the depth of the "
     "transformation undertaken and the resulting performance, closed by a reinvestment feedback "
     "loop. The framework is deliberately managerial and is made operational through a composite "
-    "index of digital-transformation intensity. It is then confronted with official European "
-    "evidence on the digital uptake of SMEs, including the position of a lagging member state, "
-    "Bulgaria, to ground the discussion in the European policy context of the Digital Decade.",
+    "index of digital-transformation intensity. It is then confronted with evidence from emerging "
+    "Asia \u2014 the ASEAN region and the fast-digitalising economies of Central Asia, with "
+    "Uzbekistan as an illustrative case \u2014 to ground the discussion in the realities of "
+    "developing-Asian markets.",
     first_indent=0.30)
 
 para(
@@ -142,10 +147,10 @@ para(
     "transformation with the dynamic-capabilities perspective into a single, SME-oriented "
     "management framework; (ii) proposes a measurable digital-transformation intensity index that "
     "managers and analysts can apply; and (iii) derives evidence-based managerial and policy "
-    "recommendations. The remainder of the article is organised as follows. Section 1 reviews the "
-    "literature and defines the core constructs. Section 2 presents the framework and the index. "
-    "Section 3 examines the European and Bulgarian evidence. Section 4 discusses the management and "
-    "policy implications. The final section concludes.",
+    "recommendations for Asian emerging economies. The remainder of the article is organised as "
+    "follows. Section 1 reviews the literature and defines the core constructs. Section 2 presents "
+    "the framework and the index. Section 3 examines the Asian evidence. Section 4 discusses the "
+    "management and policy implications. The final section concludes.",
     first_indent=0.30)
 
 # ===================== 1. LITERATURE =====================
@@ -185,19 +190,23 @@ para(
     "effort expectancy, social influence and facilitating conditions (Venkatesh, Morris, Davis & "
     "Davis, 2003). At the organisational level, the technology\u2013organisation\u2013environment "
     "framework situates adoption in the interplay of technological readiness, organisational "
-    "resources and the external environment (Tornatzky & Fleischer, 1990). For SMEs these "
-    "frameworks are particularly relevant because the adoption decision is concentrated in a small "
-    "management team and is highly sensitive to skills, cost and the surrounding ecosystem.",
+    "resources and the external environment (Tornatzky & Fleischer, 1990). For SMEs in emerging "
+    "economies these frameworks are particularly relevant because the adoption decision is "
+    "concentrated in a small management team and is highly sensitive to skills, cost and the "
+    "surrounding digital ecosystem.",
     first_indent=0.30)
 
 para(
     "Finally, a policy-oriented strand documents the SME-specific character of digital "
-    "transformation. The OECD (2021) shows that SMEs lag larger firms across most digital "
-    "indicators and that the barriers are systematic \u2014 scarce internal skills, limited finance, "
-    "uncertainty about returns and exposure to digital-security risk. Nambisan, Wright and Feldman "
-    "(2019) emphasise that digital technologies also reshape the innovation and entrepreneurship "
-    "process itself, lowering some entry barriers while raising the premium on digital capability. "
-    "Taken together, the literature motivates a framework in which external drivers, firm-level "
+    "transformation in Asia. The OECD (2021) shows that SMEs lag larger firms across most digital "
+    "indicators, while Yoshino and Taghizadeh-Hesary (2016) identify the structural constraints that "
+    "slow SME growth in Asia: limited access to finance, the absence of comprehensive databases, "
+    "low research and development spending and underdeveloped sales channels. Nambisan, Wright and "
+    "Feldman (2019) emphasise that digital technologies also reshape the innovation and "
+    "entrepreneurship process itself, lowering some entry barriers while raising the premium on "
+    "digital capability, and the Asian Development Bank (2024) argues that digitalisation can raise "
+    "the productive capacity of Asian economies provided the enabling conditions are in place. Taken "
+    "together, the literature motivates a framework in which external drivers, firm-level "
     "capabilities and the depth of transformation jointly determine SME performance.",
     first_indent=0.30)
 
@@ -234,11 +243,11 @@ equation("DTI = \u03a3\u1d62 w\u1d62 \u00b7 a\u1d62 ,   with  \u03a3\u1d62 w\u1d
 
 para(
     "where a\u1d62 \u2208 [0, 1] is the adoption level of digital element i (for example connectivity, "
-    "a website or e-commerce channel, cloud services, enterprise software, data analytics, "
-    "artificial intelligence and digital-security measures) and w\u1d62 is its weight. The index "
-    "yields a value between zero and one and corresponds, in spirit, to the \u201cdigital "
-    "intensity\u201d measures used in official European statistics. Firm performance is then modelled "
-    "as increasing in digital-transformation intensity but conditional on capability,",
+    "a website or e-commerce channel, digital payments, cloud services, enterprise software, data "
+    "analytics, artificial intelligence and digital-security measures) and w\u1d62 is its weight. The "
+    "index yields a value between zero and one and corresponds, in spirit, to the digital-intensity "
+    "measures used in international statistics. Firm performance is then modelled as increasing in "
+    "digital-transformation intensity but conditional on capability,",
     first_indent=0.30)
 
 equation("\u0394P = \u03b2 \u00b7 DTI \u00b7 C + \u03b5 ,", 2)
@@ -249,9 +258,9 @@ para(
     "influences. The multiplicative term DTI \u00b7 C expresses the core managerial proposition: "
     "technology adoption raises performance only to the extent that the firm has the capability to "
     "absorb it. A high index combined with weak capability \u2014 technology bought but not "
-    "embedded \u2014 yields little gain, which is the typical failure mode for SMEs. Table 1 sets out "
-    "the components of the index and the managerial levers associated with each block of the "
-    "framework.",
+    "embedded \u2014 yields little gain, which is the typical failure mode for SMEs in emerging "
+    "markets. Table 1 sets out the components of the index and the managerial levers associated with "
+    "each block of the framework.",
     first_indent=0.30)
 
 # ----- Figure 1 -----
@@ -278,7 +287,7 @@ for c, txt in zip(t1.rows[0].cells, ["Framework block", "Digital element / capab
 rows = [
     ("Drivers", "Market pressure; technology cost; policy and funding", "Environmental scanning; use of public support"),
     ("Sensing", "Connectivity; web presence; market intelligence", "Digital awareness; customer-data analysis"),
-    ("Seizing", "Cloud services; enterprise software; e-commerce", "Investment decisions; business-model redesign"),
+    ("Seizing", "Digital payments; cloud services; e-commerce", "Investment decisions; business-model redesign"),
     ("Reconfiguring", "Data analytics; AI; process integration", "Skills development; change management"),
     ("Protection", "Cybersecurity and data governance", "Risk management; compliance"),
     ("Performance", "Productivity; growth and exports; resilience", "Monitoring and reinvestment of gains"),
@@ -292,66 +301,71 @@ para("Source: Authors\u2019 elaboration based on Teece (2007), Tornatzky and Fle
      "OECD (2021).", italic=True, size=11, align="left", spacing=1.0, space_after=10)
 
 # ===================== 3. EVIDENCE =====================
-heading("3. Evidence from the European Union and Bulgaria")
+heading("3. Evidence from emerging Asia")
 
 para(
-    "The framework can be illustrated with official European statistics, which measure the digital "
-    "intensity of enterprises directly. Under the European Union\u2019s Digital Decade policy "
-    "programme, the agreed ambition is that more than ninety per cent of SMEs should reach at least "
-    "a basic level of digital intensity by 2030. According to Eurostat (2024), in 2023 the SMEs of "
-    "the European Union were some thirty-two percentage points below that ambition \u2014 that is, "
-    "only around fifty-eight per cent reached at least a basic level of digital intensity. The gap "
-    "is not in basic connectivity, which is almost universal, but in the more advanced technologies "
-    "\u2014 cloud computing, data analytics and artificial intelligence \u2014 that correspond to "
-    "the seizing and reconfiguring blocks of the framework and that are most strongly associated "
-    "with performance gains (OECD, 2021).",
+    "The framework can be illustrated with the experience of emerging Asia, where SMEs are at once "
+    "economically dominant and digitally constrained. Across the ASEAN member states, micro, small "
+    "and medium-sized enterprises account for the overwhelming majority of firms and the bulk of "
+    "employment, and the regional digital economy is expanding rapidly (Asian Development Bank, "
+    "2023). The constraints on their digital transformation are, however, systematic. Yoshino and "
+    "Taghizadeh-Hesary (2016) show that Asian SMEs are held back by limited access to finance, the "
+    "absence of comprehensive databases, low research and development spending and underdeveloped "
+    "sales channels \u2014 precisely the conditions that depress the capability term in the "
+    "framework. The OECD and ERIA (2024) confirm that, while ASEAN governments have strengthened "
+    "SME policy frameworks, the digitalisation of smaller firms remains uneven and skills and "
+    "finance are recurring bottlenecks.",
     first_indent=0.30)
 
 para(
-    "The aggregate gap conceals wide differences across member states, and these differences map "
-    "onto the framework. For a lagging country such as Bulgaria, the European Commission (2025) "
-    "reports that, despite well-developed connectivity infrastructure, the country is held back by "
-    "low digital skills, SME digital uptake among the lowest in the Union, and limited adoption of "
-    "cloud computing, artificial intelligence and data analytics. In the language of the framework, "
-    "Bulgarian SMEs are not short of drivers or of basic connectivity; they are short of the "
-    "capabilities \u2014 skills, finance and managerial capacity \u2014 that translate adoption into "
-    "the deeper transformation that raises performance. Table 2 summarises the European picture.",
+    "The Central Asian economies illustrate both the opportunity and the constraint with particular "
+    "clarity. Connectivity and digital infrastructure have improved quickly, and e-commerce has "
+    "grown from a low base: in Uzbekistan, the World Bank reports that the e-commerce market "
+    "expanded roughly fivefold between 2018 and 2022, exceeding half a billion United States dollars "
+    "by 2023. National policy is ambitious; under the Digital Uzbekistan 2030 strategy and the "
+    "country\u2019s development agenda, the authorities aim to turn Uzbekistan into a regional "
+    "information-technology hub, with sharply higher technology exports and large-scale job creation "
+    "in the sector (World Bank, 2023). Yet the same sources note that implementation is uneven and "
+    "that the deeper transformation of enterprises \u2014 as opposed to the roll-out of "
+    "infrastructure \u2014 depends on skills, finance and managerial capacity that remain scarce. In "
+    "the language of the framework, Central Asian SMEs increasingly have the drivers and the "
+    "connectivity, but not yet the capabilities that convert adoption into performance.",
+    first_indent=0.30)
+
+para(
+    "Table 2 summarises the Asian picture. Read through the framework, the regional evidence "
+    "delivers a consistent message: connectivity and policy ambition are necessary but not "
+    "sufficient. The binding constraint on SME performance is the capability term C in equation "
+    "(2) \u2014 digital skills, finance and managerial capacity \u2014 rather than the availability "
+    "of technology, and the reinvestment feedback loop helps explain why early movers and dynamic "
+    "urban firms pull ahead while the mass of smaller enterprises risk being locked into a "
+    "low-intensity equilibrium.",
     first_indent=0.30)
 
 # ----- Table 2 -----
 para("Table 2", bold=True, align="left", spacing=1.0, space_after=2)
-para("Digital intensity of SMEs in the European Union: ambition and reality",
+para("Digital transformation of SMEs in emerging Asia: selected observations",
      bold=True, size=12, align="left", spacing=1.0, space_after=4)
 t2 = doc.add_table(rows=1, cols=2); t2.alignment = WD_TABLE_ALIGNMENT.CENTER; t2.style = "Table Grid"
-for c, txt in zip(t2.rows[0].cells, ["Indicator", "Value / observation"]):
+for c, txt in zip(t2.rows[0].cells, ["Indicator / observation", "Evidence"]):
     c.paragraphs[0].alignment = WD_ALIGN_PARAGRAPH.CENTER
     set_run(c.paragraphs[0].add_run(txt), size=12, bold=True)
 data2 = [
-    ("Digital Decade 2030 target (SMEs, basic digital intensity)", "at least 90%"),
-    ("EU SMEs reaching basic digital intensity, 2023", "approx. 58% (32 pp below target)"),
-    ("Main shortfall", "Cloud, data analytics and AI (advanced technologies)"),
-    ("Bulgaria \u2013 connectivity", "Well-developed infrastructure"),
-    ("Bulgaria \u2013 SME digital uptake", "Among the lowest in the EU"),
-    ("Bulgaria \u2013 binding constraints", "Digital skills; cloud/AI/analytics adoption; cybersecurity"),
+    ("MSME share of enterprises in ASEAN", "On average more than 97% of all firms"),
+    ("Role in the economy", "Majority of employment; large share of GDP"),
+    ("Main SME constraints in Asia", "Finance; databases; R&D; sales channels"),
+    ("Uzbekistan \u2013 e-commerce growth", "About fivefold, 2018\u20132022; > USD 0.5 bn by 2023"),
+    ("Uzbekistan \u2013 policy ambition", "Digital 2030: regional IT hub; higher IT exports"),
+    ("Binding constraint (framework)", "Capability: digital skills, finance, management"),
 ]
 for a, b in data2:
     cells = t2.add_row().cells
     for cell, txt in zip(cells, (a, b)):
         cell.paragraphs[0].alignment = WD_ALIGN_PARAGRAPH.LEFT
         set_run(cell.paragraphs[0].add_run(txt), size=12)
-para("Source: Compiled by the authors from Eurostat (2024), European Commission (2025) and "
-     "OECD (2021).", italic=True, size=11, align="left", spacing=1.0, space_after=10)
-
-para(
-    "The evidence is consistent with the framework in two respects. First, the binding constraint "
-    "on performance is the capability term C in equation (2) rather than the mere availability of "
-    "technology: connectivity is near-universal, but advanced adoption and the skills to use it are "
-    "not. Second, the feedback loop helps explain the persistence of the gap between leading and "
-    "lagging member states: firms and countries that transform early reinvest the resulting gains "
-    "in further capability, while those that do not risk being locked into a low-intensity "
-    "equilibrium. This is the central management and policy challenge that the next section "
-    "addresses.",
-    first_indent=0.30)
+para("Source: Compiled by the authors from Asian Development Bank (2023, 2024), Yoshino and "
+     "Taghizadeh-Hesary (2016), OECD and ERIA (2024) and World Bank (2023).",
+     italic=True, size=11, align="left", spacing=1.0, space_after=10)
 
 # ===================== 4. IMPLICATIONS =====================
 heading("4. Management and policy implications")
@@ -363,36 +377,38 @@ para(
     "weak capabilities gains more from building sensing and absorptive capacity \u2014 digital "
     "skills, data literacy and a clear digital element of strategy \u2014 than from acquiring "
     "advanced tools it cannot embed. Adoption should follow the sequence of the framework: secure "
-    "connectivity and a market-facing digital channel, move core processes to cloud-based and "
-    "enterprise software, and only then layer on analytics and artificial intelligence, with "
-    "cybersecurity and data governance treated as a precondition rather than an afterthought "
-    "(OECD, 2021; Westerman et al., 2014). Crucially, digital strategy should be fused with business "
+    "connectivity and a market-facing digital channel, including the digital-payment and e-commerce "
+    "platforms that are spreading fastest in Asian markets; move core processes to cloud-based and "
+    "enterprise software; and only then layer on analytics and artificial intelligence, with "
+    "cybersecurity and data governance treated as a precondition rather than an afterthought (OECD, "
+    "2021; Westerman et al., 2014). Crucially, digital strategy should be fused with business "
     "strategy and owned by the management team, not delegated as a technical project (Bharadwaj "
     "et al., 2013).",
     first_indent=0.30)
 
 para(
-    "For policy, the same logic reframes public support. Because the binding constraint is "
-    "capability rather than connectivity, support should shift from subsidising hardware towards "
-    "building skills and absorptive capacity: management and digital-skills training, advisory and "
-    "diagnostic services, and demonstrator projects that reduce the uncertainty about returns that "
-    "deters SME investment. Instruments should be designed for the smallest firms, whose fixed costs "
-    "of adoption are proportionally highest, and should bundle finance with advice rather than offer "
-    "them separately (OECD, 2021). For lagging member states such as Bulgaria, the European "
-    "Commission\u2019s (2025) diagnosis points to a clear set of priorities \u2014 digital skills, "
-    "the uptake of cloud, analytics and artificial intelligence by SMEs, and cybersecurity \u2014 on "
-    "which the substantial European recovery and cohesion funding earmarked for the digital "
-    "transition can be concentrated.",
+    "For policy in Asian emerging economies, the same logic reframes public support. Because the "
+    "binding constraint is capability rather than connectivity, support should shift from "
+    "subsidising hardware towards building skills and absorptive capacity: management and "
+    "digital-skills training, advisory and diagnostic services, and demonstrator projects that "
+    "reduce the uncertainty about returns that deters SME investment. Two Asia-specific priorities "
+    "follow from the regional evidence. First, the finance constraint identified by Yoshino and "
+    "Taghizadeh-Hesary (2016) should be addressed directly, by bundling affordable finance with "
+    "advice and by developing the SME databases and credit information that lower the cost of "
+    "lending. Second, public digital infrastructure \u2014 interoperable digital-payment systems, "
+    "digital identity and trade-facilitating platforms \u2014 lowers the fixed cost of "
+    "transformation for the smallest firms and should be prioritised, as the ASEAN and Central "
+    "Asian experiences suggest (OECD & ERIA, 2024; World Bank, 2023; Asian Development Bank, 2024).",
     first_indent=0.30)
 
 para(
-    "The two levels are complementary. Public investment in skills and advice raises the average "
-    "capability level C across the SME population, which increases the performance return to any "
-    "given level of technology adoption and so strengthens the incentive for firms to invest. "
-    "Firm-level reinvestment of the resulting gains then sustains the virtuous cycle. Where this "
-    "complementarity is neglected \u2014 where grants fund technology without capability \u2014 the "
-    "predictable outcome is adoption without transformation, and the gap with digital leaders "
-    "persists.",
+    "The two levels are complementary. Public investment in skills, finance and digital "
+    "infrastructure raises the average capability level C across the SME population, which "
+    "increases the performance return to any given level of technology adoption and so strengthens "
+    "the incentive for firms to invest. Firm-level reinvestment of the resulting gains then sustains "
+    "the virtuous cycle. Where this complementarity is neglected \u2014 where infrastructure and "
+    "grants are provided without capability \u2014 the predictable outcome is adoption without "
+    "transformation, and the gap between dynamic and lagging firms persists.",
     first_indent=0.30)
 
 # ===================== CONCLUSIONS =====================
@@ -401,8 +417,8 @@ heading("Conclusions")
 para(
     "Digital transformation is the dominant management challenge facing contemporary enterprises, "
     "and it is most demanding for the small and medium-sized firms that form the backbone of the "
-    "European economy. This article has argued that the decisive factor is not access to technology "
-    "but the managerial capability to absorb it. Integrating the process view of digital "
+    "economies of emerging Asia. This article has argued that the decisive factor is not access to "
+    "technology but the managerial capability to absorb it. Integrating the process view of digital "
     "transformation with the dynamic-capabilities perspective, it proposed a management framework "
     "that links external drivers, the firm\u2019s sensing, seizing and reconfiguring capabilities, "
     "the depth of the transformation undertaken and the resulting performance, closed by a "
@@ -411,14 +427,15 @@ para(
     first_indent=0.30)
 
 para(
-    "Confronted with official European evidence, the framework accounts for the persistent gap "
-    "between the Digital Decade ambition and the actual digital intensity of SMEs, and for the "
-    "especially wide gap in lagging member states such as Bulgaria, where connectivity is adequate "
-    "but capability is not. The practical message for managers is to sequence investment by "
-    "capability and to own digital strategy at the top of the firm; the message for policymakers is "
-    "to fund skills and absorptive capacity, not hardware alone. The framework is conceptual and its "
-    "index and performance relationship are proposed rather than estimated; the natural next step is "
-    "empirical validation on firm-level data, including Bulgarian SME samples, which would allow the "
+    "Confronted with evidence from the ASEAN region and from the fast-digitalising economies of "
+    "Central Asia, with Uzbekistan as an illustrative case, the framework accounts for a persistent "
+    "pattern: connectivity and policy ambition are advancing quickly, but the capability to turn "
+    "technology into performance \u2014 skills, finance and management \u2014 lags behind. The "
+    "practical message for managers is to sequence investment by capability and to own digital "
+    "strategy at the top of the firm; the message for policymakers is to fund skills, finance and "
+    "shared digital infrastructure, not hardware alone. The framework is conceptual and its index "
+    "and performance relationship are proposed rather than estimated; the natural next step is "
+    "empirical validation on firm-level data from Asian emerging economies, which would allow the "
     "return to transformation and the capability threshold to be quantified and the policy "
     "priorities to be sharpened.",
     first_indent=0.30)
@@ -426,20 +443,19 @@ para(
 # ===================== REFERENCES =====================
 heading("References")
 refs = [
+    "Asian Development Bank. (2023). Asia small and medium-sized enterprise monitor 2023. Manila: "
+    "Asian Development Bank. Available online: https://www.adb.org/publications/asia-sme-monitor-2023",
+
+    "Asian Development Bank. (2024). Digital transformation for inclusive and sustainable "
+    "development in Asia. Manila: Asian Development Bank. Available online: "
+    "https://www.adb.org/publications/digital-transformation-for-inclusive-and-sustainable-development-in-asia",
+
     "Bharadwaj, A., El Sawy, O. A., Pavlou, P. A., & Venkatraman, N. (2013). Digital business "
     "strategy: Toward a next generation of insights. MIS Quarterly, 37(2), 471\u2013482. "
     "https://doi.org/10.25300/MISQ/2013/37:2.3",
 
     "Davis, F. D. (1989). Perceived usefulness, perceived ease of use, and user acceptance of "
     "information technology. MIS Quarterly, 13(3), 319\u2013340. https://doi.org/10.2307/249008",
-
-    "European Commission. (2025). Bulgaria 2025 Digital Decade country report. Brussels: European "
-    "Commission. Available online: "
-    "https://digital-strategy.ec.europa.eu/en/factpages/bulgaria-2025-digital-decade-country-report",
-
-    "Eurostat. (2024). How digitalised have the EU\u2019s enterprises become? (Eurostat news article, "
-    "29 August 2024). Luxembourg: Eurostat. Available online: "
-    "https://ec.europa.eu/eurostat/web/products-eurostat-news/w/ddn-20240829-1",
 
     "Fitzgerald, M., Kruschwitz, N., Bonnet, D., & Welch, M. (2014). Embracing digital technology: A "
     "new strategic imperative. MIT Sloan Management Review, 55(2), 1\u201312.",
@@ -450,6 +466,10 @@ refs = [
 
     "OECD. (2021). The digital transformation of SMEs. Paris: OECD Publishing. "
     "https://doi.org/10.1787/bdb9256a-en",
+
+    "OECD, & ERIA. (2024). SME Policy Index: ASEAN 2024 \u2013 Enabling sustainable growth and "
+    "digitalisation. Paris: OECD Publishing / Jakarta: Economic Research Institute for ASEAN and "
+    "East Asia. Available online: https://www.oecd.org/en/publications.html",
 
     "Teece, D. J. (2007). Explicating dynamic capabilities: The nature and microfoundations of "
     "(sustainable) enterprise performance. Strategic Management Journal, 28(13), 1319\u20131350. "
@@ -477,6 +497,16 @@ refs = [
 
     "Westerman, G., Bonnet, D., & McAfee, A. (2014). Leading digital: Turning technology into "
     "business transformation. Boston, MA: Harvard Business Review Press.",
+
+    "World Bank. (2023, November 30). World Bank to support Uzbekistan in developing the digital "
+    "economy and creating new jobs in the information technology sector (Press release). Washington, "
+    "DC: World Bank. Available online: "
+    "https://www.worldbank.org/en/news/press-release/2023/11/30/world-bank-to-support-uzbekistan-in-developing-the-digital-economy-and-creating-new-jobs-in-the-it-sector",
+
+    "Yoshino, N., & Taghizadeh-Hesary, F. (2016). Major challenges facing small and medium-sized "
+    "enterprises in Asia and solutions for mitigating them (ADBI Working Paper No. 564). Tokyo: "
+    "Asian Development Bank Institute. Available online: "
+    "https://www.adb.org/publications/major-challenges-facing-small-and-medium-sized-enterprises-asia-and-solutions",
 ]
 for ref in refs:
     p = doc.add_paragraph(); p.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
@@ -485,6 +515,6 @@ for ref in refs:
     pf.left_indent = Inches(0.5); pf.first_line_indent = Inches(-0.5)
     set_run(p.add_run(ref), size=14)
 
-out = "Economic_Archive_Digital_Transformation_SMEs.docx"
+out = "Economic_Archive_Digital_Transformation_SMEs_Asia.docx"
 doc.save(out)
 print("Saved", out)
